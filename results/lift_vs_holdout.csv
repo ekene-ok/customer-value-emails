@@ -1,0 +1,25 @@
+usage_tier,email,metric,emailed_accounts,holdout_accounts,emailed_rate,holdout_rate,lift_points,ci_low,ci_high,clear
+All accounts,Either email,Renewal,7181,819,0.8412,0.8022,3.9,1.08,6.77,True
+All accounts,Either email,Reminders adoption,7181,819,0.5304,0.4933,3.71,0.18,7.24,True
+All accounts,Recap,Renewal,3660,819,0.8372,0.8022,3.5,0.48,6.62,True
+All accounts,Recap,Reminders adoption,3660,819,0.5126,0.4933,1.93,-1.85,5.54,False
+All accounts,Recap plus next step,Renewal,3521,819,0.8455,0.8022,4.33,1.31,7.32,True
+All accounts,Recap plus next step,Reminders adoption,3521,819,0.549,0.4933,5.57,1.81,9.4,True
+Low use,Either email,Renewal,2647,299,0.7284,0.6689,5.95,0.48,11.62,True
+Low use,Either email,Reminders adoption,2647,299,0.3359,0.291,4.49,-1.17,9.98,False
+Low use,Recap,Renewal,1343,299,0.7238,0.6689,5.49,-0.1,11.51,False
+Low use,Recap,Reminders adoption,1343,299,0.2956,0.291,0.46,-5.22,6.07,False
+Low use,Recap plus next step,Renewal,1304,299,0.7331,0.6689,6.42,0.65,12.33,True
+Low use,Recap plus next step,Reminders adoption,1304,299,0.3773,0.291,8.63,2.78,14.14,True
+Medium use,Either email,Renewal,2844,350,0.8769,0.8514,2.55,-1.25,6.54,False
+Medium use,Either email,Reminders adoption,2844,350,0.5629,0.5286,3.44,-2.07,9.08,False
+Medium use,Recap,Renewal,1444,350,0.867,0.8514,1.56,-2.66,5.82,False
+Medium use,Recap,Reminders adoption,1444,350,0.5596,0.5286,3.1,-2.58,8.88,False
+Medium use,Recap plus next step,Renewal,1400,350,0.8871,0.8514,3.57,-0.36,7.79,False
+Medium use,Recap plus next step,Reminders adoption,1400,350,0.5664,0.5286,3.79,-2.0,9.64,False
+High use,Either email,Renewal,1690,170,0.958,0.9353,2.27,-1.15,6.33,False
+High use,Either email,Reminders adoption,1690,170,0.7805,0.7765,0.4,-5.9,7.06,False
+High use,Recap,Renewal,873,170,0.9622,0.9353,2.69,-0.95,6.69,False
+High use,Recap,Reminders adoption,873,170,0.7686,0.7765,-0.79,-7.49,6.41,False
+High use,Recap plus next step,Renewal,817,170,0.9535,0.9353,1.82,-1.86,5.99,False
+High use,Recap plus next step,Reminders adoption,817,170,0.7931,0.7765,1.67,-4.87,8.77,False

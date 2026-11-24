@@ -1,0 +1,9 @@
+usage_tier,metric,difference_points,ci_low,ci_high,clear
+All accounts,Renewal,0.83,-0.86,2.49,False
+All accounts,Reminders adoption,3.64,1.39,5.98,True
+Low use,Renewal,0.94,-2.37,4.42,False
+Low use,Reminders adoption,8.17,4.46,11.73,True
+Medium use,Renewal,2.01,-0.44,4.47,False
+Medium use,Reminders adoption,0.69,-2.96,4.33,False
+High use,Renewal,-0.87,-2.81,1.02,False
+High use,Reminders adoption,2.45,-1.48,6.29,False
