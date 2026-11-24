@@ -24,9 +24,9 @@ It uses a year of simulated data for **Fieldnote**, a fictional scheduling platf
 
 ## Charts
 
-![Open rates make the emails look three times as effective as they are](charts/01_open_rates_overstate.png)
+![Open rates make the emails look three times as effective](charts/01_open_rates_overstate.png)
 
-![The emails help low-use accounts most, and they rarely open them](charts/02_who_the_emails_help.png)
+![Low-use accounts gain the most from the emails, and open them least](charts/02_who_the_emails_help.png)
 
 ## Recommendation
 
