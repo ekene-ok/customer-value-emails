@@ -1,16 +1,38 @@
 # Customer Value Emails: Do They Keep Customers, and Who Should Get Them?
 
-Many B2B software companies send customers a monthly or quarterly "value email": a recap of how the account used the product, sometimes with a suggested next step. These emails are usually judged on open and click rates. This project asks the question that matters to the business: **do they change renewal, by how much, and for whom?**
+**In one line:** monthly "here's what you got from us" emails do help customers renew, but only a third as much as open rates suggest. They help most the customers who rarely open them.
 
-It uses a year of simulated data for **Fieldnote**, a fictional scheduling platform for small trades businesses (HVAC, plumbing, electrical, landscaping, cleaning), with 8,000 customer accounts and $25.5M in annual recurring revenue (ARR). At the start of the year every account was randomly assigned to one of three groups:
+Many software companies send customers a monthly email recapping how they used the product. Teams usually judge these emails by how many people open them. I wanted to know what matters more: **do the emails make customers stay?**
 
-| Group | Share | What they got |
-|---|---|---|
-| Holdout | 10% | No value emails |
-| Recap | 45% | A monthly email recapping the account's own usage |
-| Recap plus next step | 45% | The same recap plus one suggested next step: turn on automated job reminders |
+To find out, I used a fictional company, Fieldnote (a scheduling app for trades businesses), with 8,000 customers and a year of made-up data. At the start of the year, customers were split at random into three groups: no emails, a monthly recap, or a recap plus one suggested next step. Comparing renewals across the groups shows what the emails themselves caused.
 
-> Fieldnote is fictional and all data is simulated with [src/generate_data.py](src/generate_data.py). No real customer or employer data is used.
+## What I found
+
+- **The emails work.** Customers who got them renewed 3.9 percentage points more often than customers who got none
+- **Open rates make them look three times better than they are.** Customers who open a lot were already healthier and more likely to stay
+- **The people who rarely open gain the most.** Light users open about 1 in 5 emails, yet the emails lift their renewal by 6 points
+- **It's worth about $894K a year** in revenue that would otherwise leave
+
+![Open rates make the emails look three times as effective](charts/01_open_rates_overstate.png)
+
+**How to read it:** the grey bar is what an open-rate report would credit the emails with (+11.9 points). The blue bar is their real effect, measured against customers chosen at random to get no emails (+3.9 points).
+
+![Low-use accounts gain the most from the emails, and open them least](charts/02_who_the_emails_help.png)
+
+## What I'd do
+
+1. Keep the emails, and judge them by renewal instead of opens
+2. Keep emailing customers who rarely open; dropping them would give up about $604K a year
+3. Always keep a small group who get no emails, so the program can keep proving its worth
+
+## Words used here
+
+- **Renewal lift:** how many more customers renew because of the emails, compared with customers who got none
+- **Holdout group:** customers chosen at random to get no emails, so there's a fair comparison
+- **ARR (annual recurring revenue):** what customers pay per year
+
+<details>
+<summary><b>The full analysis: method, detail and how to run it</b> (for technical readers)</summary>
 
 ## The answer
 
@@ -23,10 +45,6 @@ It uses a year of simulated data for **Fieldnote**, a fictional scheduling platf
 5. **This year's test cannot settle whether the next step also lifts renewal.** The renewal difference between versions (+0.8 points, interval -0.9 to 2.5) is too small to measure. Detecting a 3-point difference for low-use accounts needs 3,484 accounts per version, more low-use accounts than Fieldnote has in a year, so reminders adoption is the measure to watch
 
 ## Charts
-
-![Open rates make the emails look three times as effective](charts/01_open_rates_overstate.png)
-
-![Low-use accounts gain the most from the emails, and open them least](charts/02_who_the_emails_help.png)
 
 ## Recommendation
 
@@ -79,3 +97,5 @@ Results are written to [results/](results/) and charts to [charts/](charts/).
 - The data is simulated, so the numbers show how the analysis works rather than how real customers behave. The design (a random holdout, intention to treat, effects by segment) carries over to real data
 - Renewal is treated as a single annual event per account; multi-year contracts and mid-term expansions are not modelled
 - Cost to produce the emails is not modelled because it is small next to the retained ARR; a real business case would include it
+
+</details>
